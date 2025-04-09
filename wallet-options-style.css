@@ -1,0 +1,236 @@
+.wallet-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Add spacing between child elements */
+
+    /* More consistent padding using rem units */
+    background-color: #1a202800;
+    border-radius: 10px;
+
+    /* Prevents it from becoming too wide on large screens */
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width overflow */
+    margin: 0 auto;
+    /* Centers it horizontally */
+    padding: 20px;
+    
+}
+
+
+#wallet-options {}
+
+.wallet-panel #wallet-options-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+    padding-right: 0px;
+    height: 5px;
+}
+
+.wallet-panel #transaction-history-button {
+    display: flex;
+    justify-content: end;
+}
+
+.wallet-panel #wallet-options-header button {
+    display: flex;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+    align-items: center;
+}
+
+.wallet-panel #wallet-options-cash-amount-wrapper {
+    padding: 20px 20px;
+    font-size: 30px;
+}
+
+.wallet-panel #cash-options-container {
+    padding: 5px 0px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.wallet-panel .cash-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.wallet-panel .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.wallet-panel .cash-option .cash-text-group {
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2px;
+
+    /* just in case spans were center-aligned */
+}
+
+.wallet-panel .cash-option .cash-text-group .amount {
+    font-size: 20px;
+    /* just in case spans were center-aligned */
+}
+
+.wallet-panel .cash-option .cash-text-group .label {
+    font-size: 12px;
+    /* just in case spans were center-aligned */
+}
+
+.wallet-panel .cash-option .action-button {
+
+    background-color: #00804d;
+    color: white;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wallet-panel .cash-option .icon-wrapper {
+
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    /* Add this */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.wallet-panel .cash-option #deposit-icon {
+    background-color: rgba(0, 255, 255, 0.481);
+    color: rgba(0, 0, 255, 0.671);
+}
+
+.wallet-panel .cash-option #withdraw-icon {
+    background-color: rgb(236, 219, 95);
+    color: rgb(131, 143, 0);
+}
+
+#withdraw-options #page-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#withdraw-options #bank-name-field {
+    text-align: start;
+}
+
+#withdraw-options #page-1 div {
+    width: 100%;
+    margin-left: 0%;
+    height: 50px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#withdraw-options #withdraw-header {
+    font-size: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+#withdraw-options #withdraw-warning-wrapper {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+}
+
+#withdraw-options #withdraw-warning {
+   
+    color: #ffd500b1;
+    padding: 2px 2px;
+    font-size: 10px;
+    height: 5px;
+    align-items: center;
+
+}
+
+#withdraw-options #page-1 input {
+    width: inherit;
+    padding: 10px;
+
+    height: 20px;
+    border-radius: 5px;
+}
+
+#withdraw-options #page-1 #acc-no-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 2px;
+}
+
+#withdraw-options #page-1 #acc-no-field span {
+    align-self: flex-start;
+    font-size: 12px;
+}
+
+#withdraw-options #page-1 #acc-no-field input {
+    width: 93%;
+}
+
+
+#withdraw-options #page-1 button {
+    padding: 5px;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+#withdraw-options #bank-name-field {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#withdraw-options #account-holder-name input {
+    background-color: #c6c6c636;
+}
+
+#withdraw-options #submit-button-wraper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    height: 40px;
+    width: 150px;
+}
+
+#withdraw-options #submit-button-wraper button {
+    background-color: #00804d;
+    color: white;
+}
+#fund-amount-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

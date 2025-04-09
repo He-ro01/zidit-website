@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZDGames</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="auth_style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wallet-options-style.css">
+    <link rel="stylesheet" href="spinner.css">
+
+
+
+</head>
+
+
+<body>
+
+    <header>
+        <div id="right">
+            <button id="menu-button">☰</button>
+            <button id="menu-back-button" style="display: none;">
+                <span class="material-icons">keyboard_backspace</span>
+            </button>
+
+            <div id="signup-button-wrapper">
+                <button id="signup-button">
+                    <span class="material-icons">person_add</span> <span>Register</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="center">
+            <i class="logo"> <img src="Logo.png"></i>
+        </div>
+        <div id="left">
+            <div id="account-wrapper">
+                <div id="account-info">
+                    <span id="balance-text">My Account</span>
+                    <span id="balance-amount">0.00</span>
+                </div>
+                <div id="wallet-logo">
+                    <button id="wallet-button">
+                        <span class="material-icons">account_balance_wallet</span>
+                    </button>
+                </div>
+            </div>
+            <div id="login-button-wrapper">
+                <button id="login-button">
+                    <span>Login</span> <span class="material-icons">login</span>
+                </button>
+            </div>
+        </div>
+
+    </header>
+    <div class="content">
+        <div class="indentation"></div>
+
+        <div class="landing-page">
+            <div class="featured-games-wrapper">
+                <div class="featured-games-text-wrapper">
+                    <span>Featured Games</span>
+                </div>
+                <div class="game-panel" id="featured-games" data-name="Sparkling Brawl" data-developer="ZIDIT"
+                    data-thumbnail="Sparkling Brawl.png" data-type="2-player">
+                    <div id="right">
+                        <div id="wrapper">
+                            <span id="sparkling-brawl-text">Sparkling Brawl</span>
+                            <button class="play-button">Play Now</button>
+                        </div>
+                    </div>
+                    <div id="left">
+                        <div id="wrapper">
+                            <img src="Sparkling Brawl.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="all-games-wrapper">
+                <div class="all-games-text-wrapper">
+                    <span>All Games</span>
+                </div>
+                <div class="all-games">
+                    <div class="game-panel" id="game-1" data-name="Sparkling Brawl" data-developer="ZIDIT"
+                        data-thumbnail="Sparkling Brawl.png" data-type="2-player">
+                        <div class="type-varible" id="2-player"></div>
+                        <div id="thumbnail"><img src="Sparkling Brawl.png"></div>
+                        <div id="info-panel">
+                            <div id="info-text-wrapper"><span id="info-text">Sparkling Brawl</span></div>
+                            <button class="play-button">Play</button>
+                        </div>
+                    </div>
+
+                    <div class="game-panel" id="game-2" data-name="Ludo" data-developer="ZIDIT"
+                        data-thumbnail="Ludo.png" data-type="4-player">
+                        <div class="type-varible" id="4-player"></div>
+                        <div id="thumbnail"><img src="Ludo.png"></div>
+                        <div id="info-panel">
+                            <div id="info-text-wrapper"><span id="info-text">Ludo</span></div>
+                            <button class="play-button">Play</button>
+                        </div>
+                    </div>
+
+                    <div class="game-panel" id="game-3" data-name="Stunt Masters" data-developer="ZIDIT"
+                        data-thumbnail="StuntMasters.png" data-type="4-player">
+                        <div class="type-varible" id="4-player"></div>
+                        <div id="thumbnail"><img src="StuntMasters.png"></div>
+                        <div id="info-panel">
+                            <div id="info-text-wrapper"><span id="info-text">Stunt Masters</span></div>
+                            <button class="play-button">Play</button>
+                        </div>
+                    </div>
+
+                    <div class="game-panel" id="game-4" data-name="Aviator" data-developer="ZIDIT"
+                        data-thumbnail="Aviator.png" data-type="unavailable">
+                        <div class="type-varible" id="unavailable"></div>
+                        <div id="thumbnail"><img src="Aviator.png"></div>
+                        <div id="info-panel">
+                            <div id="info-text-wrapper"><span id="info-text">Aviator</span></div>
+                            <button class="play-button">Play</button>
+                        </div>
+                    </div>
+
+                    <div class="game-panel" id="game-5" data-name="Shooter 2D" data-developer="ZIDIT"
+                        data-thumbnail="Shooter2D.png" data-type="2-player">
+                        <div class="type-varible" id="2-player"></div>
+                        <div id="thumbnail"><img src="Shooter2D.png"></div>
+                        <div id="info-panel">
+                            <div id="info-text-wrapper"><span id="info-text">Shooter 2D</span></div>
+                            <button class="play-button">Play</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auth-page" style="display: none;">
+            <!-- Login and Signup Section -->
+            <div id="login-section">
+                <div id="top-div">
+                    <h2>Login</h2><button id="switch-to-signup">Register Now</button>
+                </div>
+                <form id="login-form">
+                    <input type="email" id="login_email" placeholder="email" required>
+                    <input type="password" id="login_password" placeholder="Password" required>
+                    <button type="submit">
+                        <div class="spinner" style="display: none;">
+                            <svg class="circular" viewBox="25 25 50 50">
+                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"
+                                    stroke-miterlimit="10" />
+                            </svg>
+                        </div>
+                        <span>Login</span>
+                    </button>
+                    <span>Forgot Your Password?</span>
+                </form>
+
+            </div>
+
+            <div id="signup-section" style="display: none;">
+                <div id="top-div">
+                    <h2>Sign Up</h2>
+                    <button id="switch-to-login">Already Have An Account</button>
+                </div>
+                <form id="signup-form">
+                    <div class="signup-field" id="name-section">
+                        <label for="signup-name">Name*</label>
+                        <input type="name" placeholder="John" id="signup-name" required>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                    </div>
+                    <div class="signup-field" id="surname-section">
+                        <label for="signup-surname">Surname*</label>
+                        <input type="surname" placeholder="Doe" id="signup-surname" required>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                    </div>
+
+                    <div class="signup-field" id="mobile-number-section">
+                        <label for="signup-mobile-number">Mobile Number*</label>
+                        <div class="country-code-wrapper">
+                            <input type="text" id="country-code" value="+234" readonly>
+                            <input type="tel" placeholder="e.g: 8123456789" id="signup-mobile-number"
+                                placeholder="Your mobile number" required>
+                        </div>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                    </div>
+
+                    <div class="signup-field" id="email-section">
+                        <label for="signup_email">Email*</label>
+                        <input type="email" placeholder="e.g: user@mail.com" id="signup_email" required>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                    </div>
+
+                    <div class="signup-field" id="username-section">
+                        <label for="signup_username">Username*</label>
+                        <input type="text" placeholder="e.g: user" id="signup_username" required>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                    </div>
+
+                    <div class="signup-field" id="password-section">
+                        <label for="signup_password">Password*</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signup_password" required>
+                            <button type="button" class="toggle-password">
+                                <i class="material-icons">visibility_off</i>
+                            </button>
+                            </input>
+                        </div>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                        <div id="requirements" style="display: none;">
+                            <div class="requirement" id="at-least-8-characters">
+                                <input type="checkbox" value="yes">
+                                <span>At least 8 characters</span>
+                            </div>
+                            <div class="requirement" id="one-uppercase-letter">
+                                <input type="checkbox" value="yes">
+                                <span>At least 1 uppercase letter</span>
+                            </div>
+                            <div class="requirement" id="one-number">
+                                <input type="checkbox" value="yes">
+                                <span>At least 1 number</span>
+                            </div>
+                            <div class="requirement" id="one-special-character">
+                                <input type="checkbox" value="yes">
+                                <span>At least 1 special character</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="signup-field" id="confirm-password-section">
+                        <label for="confirm_password">Confirm Password*</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm_password" required>
+                            <button type="button" class="toggle-password">
+                                <i class="material-icons">visibility_off</i>
+                            </button>
+                        </div>
+                        <div class="error-text-wrapper">
+                            <span>Error</span>
+                        </div>
+                    </div>
+
+                    <button type="submit">
+                        <div class="spinner" style="display: none;">
+                            <svg class="circular" viewBox="25 25 50 50">
+                                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"
+                                    stroke-miterlimit="10" />
+                            </svg>
+                        </div>
+                        <span>Sign Up</span>
+                    </button>
+                </form>
+                <!---->
+            </div>
+        </div>
+        <div class="side-panel" id="profile-menu" style="display: none;">
+            <div id=" profile-panel">
+                <div id="pfp-wrapper">
+                    <div id="profile-pic">
+                        <i class="material-icons">person</i>
+                    </div>
+                    <span id="username-text">Username</span>
+                </div>
+
+            </div>
+            <div id="transaction-history-button-wrapper">
+                <button id="transaction-history-button">
+                    <span>Transaction History</span>
+                </button>
+            </div>
+            <div id="logout-wrapper">
+                <button id="logout-button">Logout</button>
+            </div>
+        </div>
+        <div class="wallet-panel" id="wallet-panel" style="display: none;">
+            <div id="wallet-options">
+                <div id="wallet-options-header">
+                    <span id="my-wallet-text">My Wallet</span>
+                    <button id=transaction-history-button>
+                        TransactionHistory
+                        <i class="material-icons">chevron_right</i>
+                    </button>
+                </div>
+                <div id="wallet-options-cash-amount-wrapper">
+                    <span id="wallet-options-cash-amount-text">N.0.00</span>
+                </div>
+                <div id="cash-options-container">
+                    <div class="cash-option" id="deposit-option">
+                        <div class="left">
+                            <div class="icon-wrapper" id="deposit-icon">
+                                <i class="material-icons">account_balance</i>
+                            </div>
+                            <div class="cash-text-group" id="deposit-text-group">
+                                <span class="label" id="deposit-label">Deposit Cash</span>
+                                <span class="amount" id="deposit-amount">0.00</span>
+                            </div>
+                        </div>
+                        <button class="action-button" id="deposit-button">
+                            <i class="material-icons">add</i>
+                            <span>Add Cash</span>
+                        </button>
+                    </div>
+
+                    <div class="cash-option" id="withdraw-option">
+                        <div class="left">
+                            <div class="icon-wrapper" id="withdraw-icon">
+                                <i class="material-icons">military_tech</i>
+                            </div>
+
+                            <div class="cash-text-group" id="withdraw-text-group">
+                                <span class="label" id="withdraw-label">Winnings Cash</span>
+                                <span class="amount" id="withdraw-amount">0.00</span>
+                            </div>
+                        </div>
+
+                        <button class="action-button" id="withdraw-button">
+                            <i class="material-icons">add</i>
+                            <span>Withdraw</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="popup-container" style=" display: none;">
+        <div class="popup-element" id="loading-overlay" style="display: none;">
+            <div class="spinner">
+                <svg class="circular" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4" stroke-miterlimit="10" />
+                </svg>
+            </div>
+            <span>Spinner Text Here</span>
+        </div>
+        <div class="popup-element" id="game-lobby" style="display: none;">
+            <div id="popup-header">
+                <div id="close-button-wrapper">
+                    <button class="material-icons"
+                        onclick="document.querySelector('.popup-container').style.display='none'">close</button>
+                </div>
+            </div>
+            <div id="unavailable-message"
+                style="display: none; padding: 20px; font-size: 20px; color: red; text-align: center;">
+                This game is unavailable
+            </div>
+            <div id="game-panel">
+                <div id="icon-wrapper"></div>
+                <div id="details-wrapper">
+                    <div id="name-developer">
+                        <span id="game-name">Game Name</span>
+                        <span id="game-developer">Game Developer</span>
+                    </div>
+                    <div id="game-details">
+                        <div id="player-count-wrapper">
+                            <span id="icon" class="material-icons">group</span>
+                            <span id="player-count-text"></span>
+                        </div>
+                        <div id="winnings-multiplier-wrapper">
+                            <i id="icon" class="material-icons">medal</i>
+                            <span id="winnings-text">Eg. 1.7X</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="game-warning-text-wrapper">
+                <div class="warning" id="topup-warning">
+                    <span id="warning-text">topup your account to continue</span>
+                    <button id="topup-button">
+                        Topup
+                    </button>
+                </div>
+                <div class="warning" id="login-warning">
+                    <span id="warning-text">you must login to continue</span>
+                    <button id="login-warning-button">
+                        Login
+                    </button>
+                </div>
+            </div>
+            <div id="game-requirements"></div>
+        </div>
+        <div class="popup-element" id="payment-popup" style="display: none;">
+            <div id="popup-header">
+                <div id="close-button-wrapper">
+                    <button class="material-icons">close</button>
+                </div>
+            </div>
+
+            <!-- Input for fund amount with a placeholder -->
+            <div class="field" id="fund-amount-wrapper">
+                <span>Enter Amount</span>
+                <div id=fund-amount-input-wrapper>
+                    <input id="fund-amount" placeholder="Min N.200" type="number" />
+                    <div id="fund-warning">
+                        <span>minimum amount is ₦.200</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Sponsored by Paystack with logo -->
+            <div class="field">
+                <span id="sponsored-text">
+                    Powered by
+                    <img src="paystack-logo.png" alt="Paystack Logo"
+                        style="height: 20px; width: auto; margin-left: 5px;" />
+                </span>
+            </div>
+
+            <!-- Paystack button -->
+            <div class="field" id="pay-button-wrapper">
+                <button id="paystack-button">Fund Account</button>
+            </div>
+
+        </div>
+        <div class="popup-element" id="withdraw-options" style="display: none">
+            <div id=" popup-header">
+                <div id="close-button-wrapper">
+                    <button class="material-icons">close</button>
+                </div>
+            </div>
+            <span>You need up to ₦.1,000 winnings to make a withdrawal</span>
+            <div id="page-1" style="display: none;">
+                <div id="withdraw-header">
+                    <span>Withdraw</span>
+                </div>
+                <div id="withdraw-warning-wrapper">
+                    <div id="withdraw-warning">
+                        <span>withdrawls are typically processed within 48 hours</span>
+                    </div>
+                </div>
+                <div id="acc-no-field">
+                    <span>Account Number</span>
+                    <input placeholder="e.g, 1234567890"></input>
+                </div>
+                <div id="bank-name-wrapper">
+                    <button id="bank-name-field">
+                        <span id="select-bank-text">Select Bank</span>
+                        <div id="banks-list" style="display: none;">
+                        </div>
+                    </button>
+                </div>
+                <div id="account-holder-name">
+                    <input placeholder="Account Name"></input>
+                </div>
+                <div id="withdraw-amount-wrapper">
+                    <input placeholder="e.g ₦.1,000"></input>
+                </div>
+                <div id="submit-button-wraper">
+                    <button id="submit-button">Next</button>
+                </div>
+            </div>
+            <div id="page-2">
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="logo-column">
+            <i class="logo"> <img src="Logo.png"></i>
+        </div>
+        <div class=responsible-gambling>
+            <span>Responsible Gambling</span> | <span>Help</span> | <span>Contact Us</span> | <span>T&Cs</span>
+        </div>
+
+    </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="index_script.js"></script>
+    <script src="auth_script.js"></script>
+    <script src="forms.js"></script>
+    <script src="data_dist.js"></script>
+    <script src="fund_options_script.js"></script>
+    <script src="games_script.js"></script>
+
+
+</body>
+
+</html>
