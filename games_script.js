@@ -99,6 +99,7 @@ document.querySelectorAll('.play-button').forEach((btn) => {
 
                 // Game loading logic
                 console.log(`✅ Starting game "${name}" with entry fee: N${fee}`);
+                ShowSpinner("waiting for players");
                 // loadGame(name, fee);
             });
         });
