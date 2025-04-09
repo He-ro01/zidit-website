@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE_URL = 'https://zdwallet-backend.onrender.com/auth';
 
     // Elements
     const signupForm = document.getElementById("signup-form");
@@ -128,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 username, email, password
             };
 
-            const res = await fetch(`${API_BASE_URL}/register`, {
+            const res = await fetch(`${API_BASE_URL}/auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)
@@ -166,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const res = await fetch(`${API_BASE_URL}/login`, {
+            const res = await fetch(`${API_BASE_URL}/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

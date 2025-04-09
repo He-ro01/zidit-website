@@ -1,6 +1,8 @@
 // Initialize the loggedin status
 let loggedin = false;
-let userData = {};
+let userData = {}; const API_BASE_URL = 'http://localhost:3000/api';
+
+
 const token = localStorage.getItem("zd_token");
 // Get the balance panel and toggle button elements
 const balancePanel = document.getElementById('account-wrapper');
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ShowSpinner("Just a sec...");
     PageSwitcher.init();
 });
-window.onload = function() {
+window.onload = function () {
     // Everything is fully loaded!
     console.log("Page fully loaded.");
     performYourFunction();
@@ -130,8 +132,6 @@ function performYourFunction() {
 
 // Function to check login status with token
 async function checkLoginStatus() {
-
-
     if (!token) {
         loggedin = false;
         updateDisplay();
@@ -139,7 +139,7 @@ async function checkLoginStatus() {
     }
     ShowSpinner('Retrieving Session')
     try {
-        const res = await fetch("https://zdwallet-backend.onrender.com/auth/check-login", {
+        const res = await fetch(`${API_BASE_URL}/auth/check-login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -153,6 +153,7 @@ async function checkLoginStatus() {
             loggedin = true;
             await updateUserData();
             await verifyUserTransactions();
+            console.log("logged in");
             HideSpinner();
         } else {
             console.log("not logged in");
@@ -173,7 +174,7 @@ async function checkLoginStatus() {
 const updateUserData = async () => {
     try {
         // Make a request to fetch user data (e.g., balance, username, etc.)
-        const response = await fetch('https://zdwallet-backend.onrender.com/user/data', {
+        const response = await fetch(`${API_BASE_URL}/user/data`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`, // Pass the token for authentication
