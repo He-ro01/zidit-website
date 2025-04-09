@@ -1,6 +1,6 @@
 // Initialize the loggedin status
 let loggedin = false;
-let userData = {}; const API_BASE_URL = 'http://localhost:3000/api';
+let userData = {}; const API_BASE_URL = 'https://zdwallet-backend.onrender.com';
 
 
 const token = localStorage.getItem("zd_token");
