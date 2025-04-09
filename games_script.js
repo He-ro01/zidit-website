@@ -57,8 +57,8 @@ document.querySelectorAll('.play-button').forEach((btn) => {
             return `
                 <div class="game-requirement-element">
                     <div class="left">
-                        <span class="winnings-text">Potential Winnings</span>
-                        <span class="winnings-amount">N${winnings}</span>
+                        <span id="winnings-text">Potential Winnings</span>
+                        <span id="winnings-amount">₦${winnings}</span>
                     </div>
                     <div class="right">
                         <button class="start-game-button" data-fee="${fee}">Pay N${fee.toLocaleString()}</button>

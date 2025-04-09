@@ -545,7 +545,7 @@ nav {}
 
 .popup-element {
     background-color: #10161d;
-
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 400px;
@@ -713,6 +713,7 @@ nav {}
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
     padding: 15px 10px;
 }
 
@@ -721,6 +722,7 @@ nav {}
 }
 
 .popup-container #game-lobby #game-requirements .game-requirement-element {
+    padding: 5px;
     background-color: #1A2028;
     display: flex;
     justify-content: space-between;
@@ -729,23 +731,23 @@ nav {}
     border-radius: 5px;
 }
 
-.popup-container #game-lobby #game-requirements .game-requirement-element #left {
+.popup-container #game-lobby #game-requirements .game-requirement-element .left {
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
-.popup-container #game-lobby #game-requirements .game-requirement-element #left #winnings-text {
+.popup-container #game-lobby #game-requirements .game-requirement-element .left #winnings-text {
     font-size: 10px;
     color: #c3c9ff93
 }
 
-.popup-container #game-lobby #game-requirements .game-requirement-element #left #winnings-amount {
+.popup-container #game-lobby #game-requirements .game-requirement-element .left #winnings-amount {
     font-size: 20px;
 
 }
 
-.popup-container #game-lobby #game-requirements .game-requirement-element #right {
+.popup-container #game-lobby #game-requirements .game-requirement-element .right {
     display: flex;
     flex-direction: column;
     padding: 20px;
