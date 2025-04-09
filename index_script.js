@@ -112,8 +112,22 @@ const PageSwitcher = (() => {
 
 // 👇 Initialize menu logic after DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("showing spinner");
+    ShowSpinner("Just a sec...");
     PageSwitcher.init();
 });
+window.onload = function() {
+    // Everything is fully loaded!
+    console.log("Page fully loaded.");
+    performYourFunction();
+    HideSpinner();
+};
+
+function performYourFunction() {
+    // Your logic goes here
+    console.log("Running function after full load.");
+}
+
 // Function to check login status with token
 async function checkLoginStatus() {
 
