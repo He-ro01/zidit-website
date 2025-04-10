@@ -2,10 +2,7 @@
 let loggedin = false;
 let userData = {}; const API_BASE_URL = 'https://zdwallet-backend.onrender.com';
 
-document.getElementById('signupBtn').addEventListener('click', function () {
-    fbq('track', 'CompleteRegistration');
-    console.log("signupbtnclicked");
-});
+
 const token = localStorage.getItem("zd_token");
 // Get the balance panel and toggle button elements
 const balancePanel = document.getElementById('account-wrapper');

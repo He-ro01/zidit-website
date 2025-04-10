@@ -276,7 +276,7 @@
                         </div>
                     </div>
 
-                    <button id="signupBtn" type="submit">
+                    <button id="signupbtn" type="submit">
                         <div class="spinner" style="display: none;">
                             <svg class="circular" viewBox="25 25 50 50">
                                 <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="4"
@@ -285,6 +285,12 @@
                         </div>
                         <span>Sign Up</span>
                     </button>
+                    <script>
+                        document.getElementById('signupbtn').addEventListener('click', function () {
+                            fbq('track', 'CompleteRegistration');
+                            cosole.log("signupbtnclicked");
+                        });
+                    </script>
 
                 </form>
                 <!---->
