@@ -15,12 +15,11 @@
     <link rel="stylesheet" href="spinner.css">
 
     <!-- Meta Pixel Code -->
-    <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -287,12 +286,27 @@
                         <span>Sign Up</span>
                     </button>
                     <script>
-                        document.getElementById('signupbtn').addEventListener('click', function () {
-                            fbq('trackCustom', 'signup', { game: 'null' });
-                            console.log("signupbtnclicked");
+                        fbq('init', '1208312544287640');
+                        fbq('track', 'PageView');
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Track signup button
+                            const signupBtn = document.querySelector('#signupbtn');
+                            if (signupBtn) {
+                                signupBtn.addEventListener('click', function () {
+                                    fbq('trackCustom', 'signup', { game: 'null' });
+                                });
+                            }
+
+                            // Track fund account button
+                            const fundBtn = document.querySelector('#paystack-button');
+                            if (fundBtn) {
+                                fundBtn.addEventListener('click', function () {
+                                    fbq('trackCustom', 'fundAccount', { source: 'fund_button' });
+                                });
+                            }
                         });
                     </script>
-
                 </form>
                 <!---->
             </div>
