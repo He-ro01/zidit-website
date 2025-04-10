@@ -287,7 +287,7 @@
                     </button>
                     <script>
                         document.getElementById('signupbtn').addEventListener('click', function () {
-                            fbq('track', 'CompleteRegistration');
+                            fbq('trackCustom', 'signup', { game: 'null' });
                             console.log("signupbtnclicked");
                         });
                     </script>
