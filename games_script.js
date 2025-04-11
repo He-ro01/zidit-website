@@ -1,5 +1,6 @@
 document.querySelectorAll('.play-button').forEach((btn) => {
     btn.addEventListener('click', () => {
+        fbq('track', 'play button');
         const panel = btn.closest('.game-panel');
         const type = panel.getAttribute('data-type');
         const name = panel.getAttribute('data-name');

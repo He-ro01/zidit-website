@@ -78,6 +78,7 @@ const PageSwitcher = (() => {
             }
         },
         showAuth: () => {
+            fbq('track', 'attempt auth');
             hide(landingPage);
             show(authPage);
             if (walletPanel) walletPanel.style.display = 'none';
