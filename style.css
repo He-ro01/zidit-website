@@ -806,7 +806,15 @@ nav {}
     stroke-linecap: round;
 }
 
+#game-warning-text-wrapper {
+    inset: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #game-warning-text-wrapper .warning {
+    width: 100%;
     background-color: #3333336b;
     color: rgb(255, 63, 63);
     font-size: 15px;
