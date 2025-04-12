@@ -78,6 +78,7 @@ const PageSwitcher = (() => {
             }
         },
         showAuth: () => {
+            fbq('track', 'CompleteRegistration');
             fbq('track', 'attempt auth');
             hide(landingPage);
             show(authPage);
